@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chi-Square Calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <h1>Chi-Square Calculator</h1>
+    <table id="chiSquareTable">
+        <thead>
+            <tr id="headerRow">
+                <th></th>
+                <th>Category 1</th>
+                <th>Category 2</th>
+                <th>Total</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th>Group 1</th>
+                <td><input type="number" class="g1c" value="0" min="0"></td>
+                <td><input type="number" class="g1c" value="0" min="0"></td>
+                <td class="gTotal">0</td>
+            </tr>
+            <tr>
+                <th>Group 2</th>
+                <td><input type="number" class="g2c" value="0" min="0"></td>
+                <td><input type="number" class="g2c" value="0" min="0"></td>
+                <td class="gTotal">0</td>
+            </tr>
+            <tr id="totalRow">
+                <th>Total</th>
+                <td class="cTotal">0</td>
+                <td class="cTotal">0</td>
+                <td id="grandTotal">0</td>
+            </tr>
+        </tbody>
+    </table>
+    <div class="button-container">
+        <button onclick="addCategory()">Add Category</button>
+        <button onclick="addGroup()">Add Group</button>
+        <button onclick="calculateChiSquare()">Calculate Chi-Square</button>
+    </div>
+    <div class="button-container">
+        <h3 id="result">Chi-Square Value: 0</h3>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
