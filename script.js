@@ -60,6 +60,7 @@ function addGroup() {
 
     let newTr = document.createElement('tr');
     let newTh = document.createElement('th');
+    newTh.style.borderLeft = 'none';
     newTh.textContent = `Group ${newGroupIndex + 1}`;
     newTr.appendChild(newTh);
 
@@ -80,6 +81,7 @@ function addGroup() {
     let newTdTotal = document.createElement('td');
     newTdTotal.className = 'gTotal';
     newTdTotal.textContent = '0';
+
     newTr.appendChild(newTdTotal);
 
     tbody.insertBefore(newTr, tbody.children[newGroupIndex]);
