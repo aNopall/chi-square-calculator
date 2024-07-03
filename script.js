@@ -77,7 +77,6 @@ function addGroup() {
 
     let newTr = document.createElement('tr');
     let newTh = document.createElement('th');
-    newTh.style.borderLeft = 'none';
     newTh.textContent = `Group ${newGroupIndex + 1}`;
     newTr.appendChild(newTh);
 
