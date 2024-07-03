@@ -18,11 +18,14 @@ h1 {
     text-align: center;
 }
 
+tr,
 th,
 td {
     border: 1px solid #fff;
     text-align: center;
     font-size: 14px !important;
+    color: #fff;
+    text-wrap: nowrap;
 }
 
 .icon {
