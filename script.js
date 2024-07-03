@@ -54,6 +54,23 @@ function addCategory() {
     updateTotals();
 }
 
+function removeCategory() {
+    let headerRow = document.getElementById('headerRow');
+    if (headerRow.children.length > 4) {  // Change to ensure at least 2 categories remain
+        headerRow.removeChild(headerRow.children[headerRow.children.length - 2]);
+
+        document.querySelectorAll('tbody tr').forEach((row, rowIndex) => {
+            if (rowIndex < document.querySelectorAll('tbody tr').length - 1) {
+                row.removeChild(row.children[row.children.length - 2]);
+            } else {
+                row.removeChild(row.children[row.children.length - 2]);
+            }
+        });
+
+        updateTotals();
+    }
+}
+
 function addGroup() {
     let tbody = document.querySelector('tbody');
     let newGroupIndex = tbody.children.length - 1;
@@ -81,12 +98,19 @@ function addGroup() {
     let newTdTotal = document.createElement('td');
     newTdTotal.className = 'gTotal';
     newTdTotal.textContent = '0';
-
     newTr.appendChild(newTdTotal);
 
     tbody.insertBefore(newTr, tbody.children[newGroupIndex]);
 
     updateTotals();
+}
+
+function removeGroup() {
+    let tbody = document.querySelector('tbody');
+    if (tbody.children.length > 3) {
+        tbody.removeChild(tbody.children[tbody.children.length - 2]);
+        updateTotals();
+    }
 }
 
 function calculateChiSquare() {
